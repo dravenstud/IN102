@@ -18,7 +18,7 @@ int afficher(int* grille,int N, int M){
 			switch(grille[i*M+j]){
 
 				case INCONNUS_SANS:printf("?");break;
-				case INCONNU_AVEC:printf("!");Y++;break;
+				case INCONNU_AVEC:printf("?");Y++;break;
 				case DEMINE:printf(".");break;
 				case MINE:printf("*");X++;break;
 			}
@@ -130,7 +130,9 @@ int main(){
 			break;
 		}
 	}
+	if(X==K){
 	printf("Gagne en %d tours.\n",tours);
+	}
 	// test_affichage();
 	// test_miner();
 	// test_joueur();
